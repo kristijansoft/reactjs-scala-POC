@@ -1,0 +1,14 @@
+@(selectedTab: String)
+
+@main("Welcome") {
+      @defining(play.core.PlayVersion.current) { version =>
+            <h1>
+                  This is in play
+            </h1>
+            <div id="mainview">
+                  <script>
+                        Components.mount('MainView', { selectedTab: "@selectedTab" }, document.getElementById("mainview"));
+                  </script>
+            </div>
+      }
+}
